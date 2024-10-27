@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root{
+    --dark-grey: #1A1A1A;
+    --bright-green: #51E837;
+    --white: #FFFFFF;
+}
+
+
+/* HEADER */
+header{width: 100%; padding: 18px; background-color: var(--dark-grey); margin-bottom: 30px;}
+header a{text-decoration: none;}
+
+header .logo{ font-weight: 800; color: var(--white);}
+header .logo strong{color: var(--bright-green); font-weight: 900;}
+
+/* DASHBOARD TEMPLATE */
+.container{
+    background-color: #1E1E1E;
+    height: 430px;
+    width: 1200px;
+    margin: auto;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.content1{
+    width: 65%;
+    height: 90%;
+    background-color: #0D0D0D;
+    padding: 10px;
+}
+.content2{
+    width: 20%;
+    height: 90%;
+    background-color: #0D0D0D;
+    padding: 10px;
+
+}
+
+
+/* PARENT NAV */
+.content1 nav{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.content1 nav .opt{
+    background-color: var(--bright-green);
+    padding: 6px;
+    width: 140px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+}
+/* PARENT */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 3; }
+    .div2 { grid-area: 3 / 1 / 4 / 3; }
+    .div3 { grid-area: 5 / 1 / 6 / 3; }
+    .div4 { grid-area: 1 / 4 / 6 / 6; }
+
+.parent div{
+    background-color: #1C1C1C;
+}
+
+/* FALTA MONTAR O CONTENT 2 */
+/* DEPOIS É ADICIONAR OS GRÁFICOS */
