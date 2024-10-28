@@ -91,4 +91,18 @@ header .logo strong{color: var(--bright-green); font-weight: 900;}
 }
 
 /* FALTA MONTAR O CONTENT 2 */
+/* CONTENT 2 */
+.content2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #0D0D0D;
+}
+.content2 .photo{ height: 40%; width: 70%; background-image: url(https://headshots-inc.com/wp-content/uploads/2022/06/linkedin-headshot-photography-examples-1.jpg); background-size: cover; border-radius: 100%; margin-bottom: 20px;}
+.content2 .name{background-color: var(--bright-green); font-weight: 400; width: 90%; text-align: center; padding: 3px; border-radius: 4px;}
+.content2 .menu{margin-top: 30px; width: 100%; display: flex; justify-content: center;}
+.content2 .item{margin:0 10px; background-color: #1C1C1C; width: 100%; padding: 12px; text-align: center; cursor: pointer; border-radius: 4px;}
+.content2 .item i{color: white; font-weight: 700;}
+.content2 .item:hover{background-color: #262626; transition: all .5s;}
 /* DEPOIS É ADICIONAR OS GRÁFICOS */
