@@ -76,15 +76,34 @@ header .logo strong {
 }
 .col-1{
     background-color: gold;
-    width: 50%;
+    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+.left{
+    background-color: aqua;
+    width: 40%;
+    height: 100%;
+    padding: 4px;
+}
+.right{
+    background-color: red;
+    width: 60%;
+    height: 100%;
 }
 /* ADICIONA .LEFT E .RIGHT */
 
 .col-2{
     background-color: violet;
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+}
+.left canvas{
+    width: 100% !important;
+    height: 50% !important;
+}
+.right canvas{
+    width: 100% !important;
+    height: 50% !important;
 }

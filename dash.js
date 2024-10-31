@@ -1,77 +1,71 @@
-// Primeiro gráfico de rosquinha
-const ctx1 = document.getElementById('donutChart1').getContext('2d');
-const donutChart1 = new Chart(ctx1, {
-    type: 'doughnut',
-    data: {
-        labels: ['Concluído', 'Pendente'],
-        datasets: [{
-            label: 'Principais Tarefas',
-            data: [40, 60],
-            backgroundColor: ['#51E837', '#1A1A1A'],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: { display: false }
-        }
-    }
-});
+  // Configurações do Gráfico de Rosquinha 1
+  const ctx1 = document.getElementById('donutChart1').getContext('2d');
+  const donutChart1 = new Chart(ctx1, {
+      type: 'doughnut',
+      data: {
+          labels: ['Concluído', 'Pendente'],
+          datasets: [{
+              label: 'Status',
+              data: [60, 40],
+              backgroundColor: ['#51E837', '#FF6B6B'], // Cores das fatias
+              borderColor: '#FFFFFF', // Cor da borda
+              borderWidth: 2
+          }]
+      },
+      options: {
+          responsive: true,
+          plugins: {
+              legend: { display: true, position: 'left' }, // Exibe a legenda abaixo
+              tooltip: { enabled: true } // Ativa o tooltip
+          }
+      }
+  });
 
-// Segundo gráfico de rosquinha
-const ctx2 = document.getElementById('donutChart2').getContext('2d');
-const donutChart2 = new Chart(ctx2, {
-    type: 'doughnut',
-    data: {
-        labels: ['Aprovado', 'Reprovado'],
-        datasets: [{
-            label: 'Avaliações do Evento',
-            data: [75, 25],
-            backgroundColor: ['#51E837', '#1A1A1A'],
-            borderWidth: 0
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: { display: false }
-        }
-    }
-});
+  // Configurações do Gráfico de Rosquinha 2
+  const ctx2 = document.getElementById('donutChart2').getContext('2d');
+  const donutChart2 = new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+          labels: ['Confirmados', 'Faltantes'],
+          datasets: [{
+              label: 'Presença',
+              data: [75, 25],
+              backgroundColor: ['#36A2EB', '#FFCE56'], // Cores das fatias
+              borderColor: '#FFFFFF', // Cor da borda
+              borderWidth: 2
+          }]
+      },
+      options: {
+          responsive: true,
+          plugins: {
+              legend: { display: true, position: 'left' }, // Exibe a legenda abaixo
+              tooltip: { enabled: true } // Ativa o tooltip
+          }
+      }
+  });
 
-// Gráfico de barras
-const ctx3 = document.getElementById('barChart').getContext('2d');
-const barChart = new Chart(ctx3, {
-    type: 'bar',
-    data: {
-        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
-        datasets: [{
-            label: 'Gastos Mensais',
-            data: [1200, 900, 700, 1300],
-            backgroundColor: '#51E837'
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: { display: true }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    color: '#FFFFFF'  // Cor do texto para melhor visualização no tema escuro
-                }
-            },
-            x: {
-                ticks: {
-                    color: '#FFFFFF'
-                }
-            }
-        }
-    }
-});
+  // Configurações do Gráfico de Barras
+  const ctx3 = document.getElementById('barChart').getContext('2d');
+  const barChart = new Chart(ctx3, {
+      type: 'bar',
+      data: {
+          labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'], // Meses ou qualquer categoria desejada
+          datasets: [{
+              label: 'Gastos por Categoria',
+              data: [120, 90, 150, 110], // Dados para cada categoria
+              backgroundColor: '#FF6384', // Cor das barras
+              borderColor: '#FFFFFF', // Cor da borda das barras
+              borderWidth: 1
+          }]
+      },
+      options: {
+          responsive: true,
+          plugins: {
+              legend: { display: true, position: 'top' }, // Posição da legenda
+              tooltip: { enabled: true } // Ativa o tooltip
+          },
+          scales: {
+              y: { beginAtZero: true } // Inicia o eixo Y no zero
+          }
+      }
+  });
