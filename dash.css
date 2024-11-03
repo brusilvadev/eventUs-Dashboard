@@ -10,7 +10,7 @@
 
 :root {
     --dark-grey: #1A1A1A;
-    --bright-green: #51E837;
+    --bright-green: #04E762;
     --white: #FFFFFF;
 }
 
@@ -44,13 +44,13 @@ header .logo strong {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: dodgerblue;
+
 }
 .menu{
     display: flex;
     justify-content: center;
     width: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 .menu .item{
     margin: 0 30px;
@@ -72,10 +72,8 @@ header .logo strong {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: peru;
 }
 .col-1{
-    background-color: gold;
     width: 60%;
     display: flex;
     justify-content: center;
@@ -87,10 +85,10 @@ header .logo strong {
     padding: 4px;
 }
 .right{
-    background-color: red;
     width: 60%;
     height: 100%;
     margin: 10px;
+    margin: 0 50px;
 }
 
 /* FORMATANDO OS GRÁFICOS EM LEFT E RIGHT */
@@ -102,10 +100,10 @@ header .logo strong {
     cursor: pointer;
 }
 .right .percentage{
-    margin-top: 40px;
     background-color: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
     border-radius: 9px;
+    margin-top: 40px;
     margin-bottom: 20px;
     padding: 40px;
     font-size: 40px;
@@ -131,24 +129,24 @@ header .logo strong {
 
 
 .col-2{
-    background-color: violet;
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .col-2 .card{
+    height: 80%;
     width: 70%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: rgb(243, 243, 243);
+    background-color: white;
     border-radius: 9px;
     box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.45);
     padding: 8px;
 }
 .col-2 .card .photo{
+    margin-top: 28px;
     height: 140px;
     width: 140px;
     background-image: url(https://pbs.twimg.com/profile_images/1638293944357335041/yVq0ibLA_400x400.jpg);
@@ -156,25 +154,160 @@ header .logo strong {
     border-radius: 100%;
     margin-bottom: 20px;
 }
-.col-2 .card span{
+.col-2 .card .dash-name{
     font-size: 24px;
     text-transform: uppercase;
 }
+.col-2 .card .dash-job{
+    font-size: 24px;
+    margin-bottom: 28px;
+    color: gray;
+}
 .col-2 .card .card-menu{
     display: flex;
-    background-color: gold;
     width: 70%;
     justify-content: space-around;
 }
 .col-2 .card .card-menu .card-item{
-    background-color: red;
     padding: 8px;
 }
 .col-2 .card .card-menu .card-item{
-    background-color: red;
+    background-color: #04E762;
     padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.col-2 .card .card-menu .card-item:hover{
+    background-color: #15e1a0;
+    transform: scale(1.1);
+    padding: 8px;
+    cursor: pointer;
+    transition: all .5s;
 }
 
-/* Arrumar Nav (Card-menu) */
-/* Arrumar Cores */
-/* Ajustes finais */
+.col-2 .card .card-menu .card-item i{
+    font-size: 28px;
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1219px) { /* LARGURA MÁXIMA DE ATÉ O TABLET */
+    .dash-container{
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu{
+        width: 100%;
+    }
+    .graph-container{
+        width: 100%;
+    }
+    .col-1{
+        width: 60%;
+    }
+    .left{
+        width: 40%;
+    }
+    .right{
+        width: 60%;
+        margin: 0 10px;
+    }
+    .right .percentage{
+        width: 100%;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .col-2{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    canvas{
+        width: 100%;
+        height: 100%;
+    }
+    .card{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .dash-name{
+        font-size: 20px !important;
+    }
+    .dash-job{
+        font-size: 16px !important;
+    }
+    .card-menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-item{
+        padding: 2px !important;
+    }
+  }
+
+  @media (max-width: 480px) { /* LARGURA MÁXIMA DE ATÉ O CELULAR */
+    .dash-container{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .menu .item{
+        margin: 0 10px;
+        padding: 8px;
+        width: 30%;
+        text-align: center;
+        border-radius: 6px;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.85);
+        background-color: var(--bright-green);
+        transition: all .5s;
+        cursor: pointer;
+    }
+
+    .graph-container{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .col-1{
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+    }
+    .col-2{
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        align-items: center;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    canvas{
+        width: 100% !important;
+        height: 100% !important;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+  }
