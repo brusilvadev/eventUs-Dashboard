@@ -12,6 +12,8 @@
     --dark-grey: #1A1A1A;
     --bright-green: #04E762;
     --white: #FFFFFF;
+    --main-gradient: background-image: linear-gradient(to bottom, #04e762, #00e675, #00e485, #00e293, #16e0a0);
+    --second-gradient: background-image: linear-gradient(to bottom, #06d65c, #00d26c, #00cf79, #00ca84, #17c68e);
 }
 
 /* HEADER STYLES */
@@ -46,11 +48,24 @@ header .logo strong {
     align-items: center;
 
 }
+.dash-container h1{
+    margin-bottom: 8px;
+    color: #109c3c;
+    cursor: default;
+    text-align: center;
+}
+.dash-container p{
+    width: 70%;
+    margin-bottom: 28px;
+    color: rgb(76, 75, 75);
+    cursor: default;
+    text-align: center;
+}
 .menu{
     display: flex;
     justify-content: center;
     width: 50%;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 .menu .item{
     margin: 0 30px;
@@ -59,12 +74,12 @@ header .logo strong {
     text-align: center;
     border-radius: 6px;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.85);
-    background-color: var(--bright-green);
+    background-image: linear-gradient(to bottom, #04e762, #00e675, #00e485, #00e293, #16e0a0);
     transition: all .5s;
     cursor: pointer;
 }
 .menu .item:hover{
-    background-color: #3dce6b;
+    transform: scale(1.1);
     transition: all .5s;
 }
 
@@ -119,6 +134,7 @@ header .logo strong {
 .left canvas{
     width: 100% !important;
     height: 50% !important;
+    padding: 8px !important;
 }
 .right canvas{
     width: 100% !important;
@@ -140,7 +156,7 @@ header .logo strong {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
+    background-image: linear-gradient(to bottom, #04e762, #00e675, #00e485, #00e293, #16e0a0);
     border-radius: 9px;
     box-shadow: 8px 4px 12px rgba(0, 0, 0, 0.45);
     padding: 8px;
@@ -153,15 +169,18 @@ header .logo strong {
     background-size: cover;
     border-radius: 100%;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .col-2 .card .dash-name{
     font-size: 24px;
     text-transform: uppercase;
+    font-weight: 700;
+    color: white;
 }
 .col-2 .card .dash-job{
     font-size: 24px;
     margin-bottom: 28px;
-    color: gray;
+    color: var(--dark-grey);
 }
 .col-2 .card .card-menu{
     display: flex;
@@ -172,22 +191,23 @@ header .logo strong {
     padding: 8px;
 }
 .col-2 .card .card-menu .card-item{
-    background-color: #04E762;
+    background-color: white;
     padding: 8px;
     border-radius: 6px;
     cursor: pointer;
     transition: all .5s;
 }
 .col-2 .card .card-menu .card-item:hover{
-    background-color: #15e1a0;
     transform: scale(1.1);
     padding: 8px;
     cursor: pointer;
+    color: black;
     transition: all .5s;
 }
 
 .col-2 .card .card-menu .card-item i{
     font-size: 28px;
+    color: var(--dark-grey);
 }
 
 
